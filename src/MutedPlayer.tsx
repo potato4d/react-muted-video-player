@@ -1,4 +1,5 @@
 import React, { useState, useRef, useLayoutEffect } from 'react'
+import { toBool } from './utils/converter'
 
 export type MutedPlayerProps = JSX.IntrinsicElements['video']
 
@@ -19,5 +20,12 @@ export const MutedPlayer: React.FC<MutedPlayerProps> = props => {
     videoRef.current.setAttribute('autoplay', '1')
   }, [dispatched, setDispatched])
 
-  return <video {...p} autoPlay muted playsInline />
+  return (
+    <video
+      {...p}
+      autoPlay={toBool(autoPlay, true)}
+      muted={true}
+      playsInline={toBool(playsInline, true)}
+    />
+  )
 }
