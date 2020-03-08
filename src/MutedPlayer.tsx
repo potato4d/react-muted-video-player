@@ -3,7 +3,7 @@ import React, { useState, useRef, useLayoutEffect } from 'react'
 export type MutedPlayerProps = JSX.IntrinsicElements['video']
 
 export const MutedPlayer: React.FC<MutedPlayerProps> = props => {
-  const { autoPlay, muted, playsInline, ...p } = props;
+  const { autoPlay, muted, playsInline, ...p } = props
   const [dispatched, setDispatched] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
   useLayoutEffect(() => {
@@ -19,10 +19,5 @@ export const MutedPlayer: React.FC<MutedPlayerProps> = props => {
     videoRef.current.setAttribute('autoplay', '1')
   }, [dispatched, setDispatched])
 
-  return <video
-    {...p}
-    autoPlay
-    muted
-    playsInline
-  />
+  return <video {...p} autoPlay muted playsInline />
 }
