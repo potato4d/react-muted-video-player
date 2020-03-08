@@ -11,10 +11,6 @@
     "build": "rollup -c",
     "format": "prettier './**/*.{js,jsx,ts,tsx}' --write"
   },
-  "dependencies": {
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
-  },
   "devDependencies": {
     "@types/jest": "^25.1.4",
     "@types/node": "^13.9.0",
@@ -30,5 +26,9 @@
     "ts-jest": "^25.2.1",
     "ts-node": "^8.6.2",
     "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
   }
 }
