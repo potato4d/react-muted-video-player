@@ -1,3 +1,3 @@
-import * as Player from './MutedPlayer'
-export const { MutedPlayer } = Player
+export * from './MutedPlayer'
+import { MutedPlayer } from './MutedPlayer'
 export default MutedPlayer
