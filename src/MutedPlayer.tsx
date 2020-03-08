@@ -23,6 +23,7 @@ export const MutedPlayer: React.FC<MutedPlayerProps> = props => {
   return (
     <video
       {...p}
+      ref={videoRef}
       autoPlay={toBool(autoPlay, true)}
       muted={true}
       playsInline={toBool(playsInline, true)}
